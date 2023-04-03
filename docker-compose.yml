@@ -1,0 +1,9 @@
+version: '3.10'
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - API_URL=https://api.7timer.dev/bin/api.pl
+    command: ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]
