@@ -101,6 +101,6 @@ Example
 
 **Future Improvements**
 
-Add more weather parameters, such as solar radiation, wind speed and direction, precipitation, and pressure.
-Add caching mechanism to reduce the number of API calls.
-Add more tests.
+* Add more weather parameters, such as solar radiation, wind speed and direction, precipitation, and pressure.
+* Add caching mechanism to reduce the number of API calls.
+* Add more tests.
