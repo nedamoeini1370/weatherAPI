@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from unittest.mock import AsyncMock, patch
+from unittest.mock import AsyncMock, patch, MagicMock
 
 import pytest
 from fastapi.testclient import TestClient
@@ -22,7 +22,9 @@ async def mocked_get_7timer(*args, **kwargs):
             {"timepoint": 9, "cloudcover": 50, "temp2m": 14},
         ],
     }
-    return AsyncMock(status_code=200, json=AsyncMock(return_value=mock_response))
+    response = MagicMock()
+    response.json = MagicMock(return_value=mock_response)
+    return response
 
 
 # Define a function to test the get_weather endpoint

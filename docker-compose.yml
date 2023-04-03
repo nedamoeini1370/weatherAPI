@@ -6,4 +6,7 @@ services:
       - "8000:8000"
     environment:
       - API_URL=https://api.7timer.dev/bin/api.pl
+    env_file:
+      - .env.dev
     command: ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
