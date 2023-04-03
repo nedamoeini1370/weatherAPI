@@ -92,6 +92,7 @@ Example
 * Activate the virtual environment: source env/bin/activate
 * Install the dependencies: pip install -r requirements.txt
 * Set the environment variable for OpenCage API key: export OPENCAGE_API_KEY=your_api_key
+* You can get an API key from https://opencagedata.com/api
 * Starting the API
 * To start the API, run uvicorn main:app --reload in your terminal.
 
